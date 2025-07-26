@@ -1,6 +1,6 @@
 FROM n8nio/n8n:latest
 
-# Создаем директорию для постоянных данных
+# Создаем директорию для данных
 USER root
 RUN mkdir -p /data && chown -R node:node /data
 USER node
@@ -9,5 +9,3 @@ USER node
 ENV N8N_USER_FOLDER=/data
 
 EXPOSE 5678
-
-VOLUME ["/data"]
