@@ -13,5 +13,5 @@ USER node
 
 EXPOSE 5678
 
-# Явно указываем команду запуска
-CMD ["node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
+# Используем команду запуска по умолчанию из образа
+CMD ["n8n"]
