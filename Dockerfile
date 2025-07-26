@@ -1,9 +1,14 @@
 FROM n8nio/n8n:latest
 
-WORKDIR /home/node
+# Устанавливаем рабочую директорию
+WORKDIR /data
 
+# Устанавливаем переменные окружения
+ENV N8N_PORT=5678
+ENV N8N_LISTEN_ADDRESS=0.0.0.0
+
+# Открываем порт
 EXPOSE 5678
 
-USER node
-
-CMD ["n8n", "start"]
+# Запускаем n8n
+CMD ["n8n"]
