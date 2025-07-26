@@ -16,4 +16,4 @@ USER node
 WORKDIR /home/node
 
 # Запускаем n8n с полным путем
-CMD ["/usr/local/bin/node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
+CMD ["node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
